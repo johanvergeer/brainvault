@@ -72,4 +72,11 @@ class ForceTest {
         val result = force.toKnString(2)
         assertEquals("1.23 kN", result)
     }
+
+    @Test
+    fun `pow returns force raised to given power`() {
+        val f = 2.0.N
+        val result = f.pow(3)
+        assertEquals(8.N, result)
+    }
 }
