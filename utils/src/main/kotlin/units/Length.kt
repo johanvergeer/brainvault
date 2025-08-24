@@ -24,6 +24,7 @@ value class Length(private val meters: Double) {
 
     /** Scales this length by a scalar. */
     operator fun times(k: Double) = Length(meters * k)
+    operator fun times(k: Int) = Length(meters * k)
 
     /** Divides this length by a scalar. */
     operator fun div(k: Double) = Length(meters / k)

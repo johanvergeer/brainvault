@@ -40,9 +40,16 @@ class LengthTest {
     }
 
     @Test
-    fun `times multiplies a length by a scalar`() {
+    fun `times multiplies a length by a Double scalar`() {
         val length = 1.5.m.length
         val result = length * 3.0
+        assertEquals(4.5, result.inMeters)
+    }
+
+    @Test
+    fun `times multiplies a length by an Int scalar`() {
+        val length = 1.5.m.length
+        val result = length * 3
         assertEquals(4.5, result.inMeters)
     }
 
