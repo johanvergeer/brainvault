@@ -9,6 +9,10 @@ plugins {
     kotlin("jvm")
 }
 
+subprojects {
+    apply(plugin = "org.jetbrains.dokka")
+}
+
 kotlin {
     // Use a specific Java version to make it easier to work in different environments.
     jvmToolchain(21)
